@@ -1,0 +1,8 @@
+CREATE TABLE USERS (
+ID int AUTO_INCREMENT PRIMARY KEY,
+NAME varchar(45),
+EMAIL varchar(45),
+SEX int,
+BIRTHDATE date,
+INTERESTS varchar(45)
+)

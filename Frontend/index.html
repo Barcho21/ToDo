@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <script defer src="toDo.js"></script>
+</head>
+
+<body onload="showTasks()">
+    <div class="container">
+        <h1>Lista de tareas</h1>
+        <form action="#" method="post">
+            <div class="frm">
+                <dialog id="confirmDeleteDialog">
+                    <form method="dialog">
+                        <input type="hidden" id="idToDelete" value="">
+                        <h1>¿Esta seguro que quiere eliminar el siguiente registro?</h1>
+                        <p>Tarea: <span id="span_name"></span></p>
+                        <p>Fecha: <span id="span_date"></span></p>
+                        <p>Descripcion: <span id="span_description"></span></p>
+                        <button id="confirmDeleteButton" type="submit">Eliminar</button>
+                        <button id="cancelDeleteButton">Cancelar</button>
+                    </form>
+                </dialog>
+                <input type="hidden" id="id" value="">
+                <input type="hidden" id="status" value="">
+                <div>
+                    <label for="task_name" >Tarea:</label>
+                    <input type="text" id="task_name">
+                </div>
+                <div class="field">
+                    <label for="task_date">Fecha:</label>
+                    <input type="date" id="task_date">
+                </div>
+                <div class="field">
+                    <label for="task_description">Descripcion:</label>
+                    <input type="text" id="task_description">
+                </div>
+                
+                <input type="button" id="task_submit" value="Enviar" onclick="insert()">
+            </div>
+        </form>
+        <div>
+            <h2>Lista de tareas a realizar:</h2>
+            <table id="task_table"> 
+                <tr>                   
+                    <th>Tarea</th>
+                    <th>Descripcion</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
